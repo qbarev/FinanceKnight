@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GRC-Ng-jrH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transaction-->
+        <scene sceneID="aKe-nf-eIr">
+            <objects>
+                <tableViewController id="pFJ-bQ-wP7" customClass="TransactionController" customModule="FinanceKnight" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="CXQ-pr-kM9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SegmentedControl" id="N5P-RL-sBb" customClass="SegmentedCell" customModule="FinanceKnight" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N5P-RL-sBb" id="ECP-Lt-xVd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PnQ-EN-giG">
+                                            <rect key="frame" x="20" y="6.5" width="374" height="32"/>
+                                            <segments>
+                                                <segment title="Income"/>
+                                                <segment title="Expense"/>
+                                                <segment title="Transfer"/>
+                                            </segments>
+                                            <color key="selectedSegmentTintColor" red="0.35294117650000001" green="0.42352941179999998" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="selectTransactionType:" destination="pFJ-bQ-wP7" eventType="valueChanged" id="sV3-yH-XGz"/>
+                                            </connections>
+                                        </segmentedControl>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="PnQ-EN-giG" firstAttribute="centerY" secondItem="ECP-Lt-xVd" secondAttribute="centerY" id="1wn-Ug-qlv"/>
+                                        <constraint firstItem="PnQ-EN-giG" firstAttribute="leading" secondItem="ECP-Lt-xVd" secondAttribute="leadingMargin" id="UOn-k1-9gD"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="PnQ-EN-giG" secondAttribute="trailing" id="fCn-PX-VZQ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="segmentedControl" destination="PnQ-EN-giG" id="82M-4U-d5B"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pFJ-bQ-wP7" id="Hz7-8h-nTu"/>
+                            <outlet property="delegate" destination="pFJ-bQ-wP7" id="KrO-aw-xdE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Transaction" id="LfM-By-W5T">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="fwy-Ir-Ihp">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H8h-Mx-m56">
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.35294117650000001" green="0.42352941179999998" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="pFJ-bQ-wP7" eventType="touchUpInside" id="vMr-QM-09l"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="chT-qM-eni" kind="show" identifier="CategoryPicker" id="lrd-vV-D3C"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bux-on-2w8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2025" y="-1446"/>
+        </scene>
+        <!--Category Picker Controller-->
+        <scene sceneID="WP7-d8-s4V">
+            <objects>
+                <tableViewController id="chT-qM-eni" customClass="CategoryPickerController" customModule="FinanceKnight" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="cBv-sF-pIB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="chT-qM-eni" id="AZC-et-14T"/>
+                            <outlet property="delegate" destination="chT-qM-eni" id="JiS-cd-RvL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ksG-Et-boh"/>
+                    <connections>
+                        <segue destination="9Vb-J1-8I7" kind="presentation" identifier="WalletSettings" id="fq9-LV-kJb"/>
+                        <segue destination="cyE-Lj-7zm" kind="presentation" identifier="CategorySettings" id="3c5-Ib-GAG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I8K-H1-gb0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3041" y="-1446"/>
+        </scene>
+        <!--WalletSettings-->
+        <scene sceneID="HHj-uz-Kak">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WalletSettings" id="9Vb-J1-8I7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6U-yL-hLw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4095" y="-1294"/>
+        </scene>
+        <!--CategorySettings-->
+        <scene sceneID="RRk-ch-iUI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CategorySettings" id="cyE-Lj-7zm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g6D-zZ-J6F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4095" y="-1621"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="0dp-0d-GGc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GRC-Ng-jrH" customClass="BaseNavigationController" customModule="FinanceKnight" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="cHH-E9-Gvx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fcb-di-Tqy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pFJ-bQ-wP7" kind="relationship" relationship="rootViewController" id="gy8-13-N4l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q17-to-psU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="-1446"/>
+        </scene>
+    </scenes>
+</document>

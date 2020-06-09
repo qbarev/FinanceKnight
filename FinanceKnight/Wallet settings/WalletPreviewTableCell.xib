@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WalletPreviewTableCell" rowHeight="229" id="KGk-i7-Jjw" customClass="WalletPreviewTableCell" customModule="FinanceKnight" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="229"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="348" height="229"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGX-G0-PKA" customClass="DesignableView" customModule="FinanceKnight" customModuleProvider="target">
+                        <rect key="frame" x="20" y="4" width="308" height="208"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="bXK-0a-0oP">
+                                <rect key="frame" x="16" y="16" width="43" height="76.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gz0-f0-4kb">
+                                        <rect key="frame" x="0.0" y="0.0" width="43" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJS-xh-aIF">
+                                        <rect key="frame" x="0.0" y="28.5" width="27" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TNf-Rw-fYx" customClass="DesignableView" customModule="FinanceKnight" customModuleProvider="target">
+                                <rect key="frame" x="252" y="152" width="40" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZM-Lg-DY9">
+                                        <rect key="frame" x="12.5" y="5.5" width="15" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="qZM-Lg-DY9" firstAttribute="centerX" secondItem="TNf-Rw-fYx" secondAttribute="centerX" id="FF8-9m-e7j"/>
+                                    <constraint firstAttribute="width" constant="40" id="S7g-hi-vTd"/>
+                                    <constraint firstItem="qZM-Lg-DY9" firstAttribute="centerY" secondItem="TNf-Rw-fYx" secondAttribute="centerY" id="Y3N-P6-S2K"/>
+                                    <constraint firstAttribute="height" constant="40" id="dED-fC-iG5"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bXK-0a-0oP" firstAttribute="top" secondItem="yGX-G0-PKA" secondAttribute="top" constant="16" id="UIo-3a-so6"/>
+                            <constraint firstAttribute="height" constant="208" id="Upb-EK-5H4"/>
+                            <constraint firstAttribute="bottom" secondItem="TNf-Rw-fYx" secondAttribute="bottom" constant="16" id="b6E-N2-4Tq"/>
+                            <constraint firstItem="bXK-0a-0oP" firstAttribute="leading" secondItem="yGX-G0-PKA" secondAttribute="leading" constant="16" id="g9M-If-gTd"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bXK-0a-0oP" secondAttribute="trailing" constant="16" id="h7t-Z5-Dea"/>
+                            <constraint firstAttribute="trailing" secondItem="TNf-Rw-fYx" secondAttribute="trailing" constant="16" id="uFu-1M-5mQ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.14999999999999999"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="yGX-G0-PKA" secondAttribute="bottom" constant="4" id="3LL-zo-X1t"/>
+                    <constraint firstItem="yGX-G0-PKA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Ove-09-h0P"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="yGX-G0-PKA" secondAttribute="trailing" id="Tza-Ut-YA0"/>
+                    <constraint firstItem="yGX-G0-PKA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="Wrr-BX-NhN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="balanceLabel" destination="JJS-xh-aIF" id="lv1-GD-XEb"/>
+                <outlet property="currencyLabel" destination="qZM-Lg-DY9" id="ea5-dM-018"/>
+                <outlet property="titleLabel" destination="gz0-f0-4kb" id="MU7-hv-ST8"/>
+            </connections>
+            <point key="canvasLocation" x="115.94202898550725" y="179.12946428571428"/>
+        </tableViewCell>
+    </objects>
+</document>

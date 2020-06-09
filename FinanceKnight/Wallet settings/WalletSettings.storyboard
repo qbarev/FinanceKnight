@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h58-We-KED">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create wallet-->
+        <scene sceneID="Xxi-Ev-MPc">
+            <objects>
+                <tableViewController id="jpu-PH-miJ" customClass="WalletSettingsController" customModule="FinanceKnight" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="gdf-Cu-2Bn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="jpu-PH-miJ" id="gkt-jV-4Ea"/>
+                            <outlet property="delegate" destination="jpu-PH-miJ" id="Zqq-NH-2QF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Create wallet" id="lot-Og-6hX">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="N4c-jb-JFb">
+                            <color key="tintColor" red="0.35294117650000001" green="0.42352941179999998" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancel:" destination="jpu-PH-miJ" id="Evo-Cs-QZ0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="dsC-tO-jDs" kind="show" identifier="CurrencyPicker" id="6Yi-wV-Oek"/>
+                        <segue destination="oGs-Kb-SiA" kind="show" identifier="ColorPicker" id="R2H-Wz-N13"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jo-LX-wYA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3204" y="-238"/>
+        </scene>
+        <!--Currency Picker Controller-->
+        <scene sceneID="4X1-FX-kGR">
+            <objects>
+                <tableViewController id="dsC-tO-jDs" customClass="CurrencyPickerController" customModule="FinanceKnight" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="nBR-Lx-751">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="dsC-tO-jDs" id="FwE-Y5-C3A"/>
+                            <outlet property="delegate" destination="dsC-tO-jDs" id="XP2-Ix-hST"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="UL7-Cf-bfw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E2X-pu-aYn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4528" y="-919"/>
+        </scene>
+        <!--Color Picker Controller-->
+        <scene sceneID="Sta-a7-3Fp">
+            <objects>
+                <tableViewController id="oGs-Kb-SiA" customClass="ColorPickerController" customModule="FinanceKnight" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="akN-nu-Wnn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="oGs-Kb-SiA" id="PLI-I2-rOw"/>
+                            <outlet property="delegate" destination="oGs-Kb-SiA" id="z0e-9r-jHH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="jSo-UL-8wq"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VGg-NS-vqc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4528" y="139"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="85b-oJ-y2D">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h58-We-KED" customClass="BaseNavigationController" customModule="FinanceKnight" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="cAd-a2-PFg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qg1-Jz-CLZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jpu-PH-miJ" kind="relationship" relationship="rootViewController" id="EKF-7m-tDN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KXs-Tw-TqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2237.68115942029" y="-238.39285714285714"/>
+        </scene>
+    </scenes>
+</document>

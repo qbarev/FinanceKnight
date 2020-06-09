@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Te-mZ-vvX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings Controller-->
+        <scene sceneID="da6-ux-0Mq">
+            <objects>
+                <tableViewController id="644-Sa-RYL" customClass="SettingsController" customModule="FinanceKnight" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="lfB-5b-FCn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="644-Sa-RYL" id="uQG-dk-4dP"/>
+                            <outlet property="delegate" destination="644-Sa-RYL" id="0t4-H4-9fc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="BXz-U0-6mQ">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" style="plain" id="cYy-ab-CP8">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xES-aS-5Dc">
+                                <rect key="frame" x="20" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.35294117650000001" green="0.42352941179999998" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancel:" destination="644-Sa-RYL" eventType="touchUpInside" id="Xbb-Rv-uFW"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="03g-IF-tBk" kind="show" identifier="CurrencyPicker" id="ELs-6c-E77"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kBA-a9-BP5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997.10144927536237" y="154.6875"/>
+        </scene>
+        <!--Currency Picker Controller-->
+        <scene sceneID="Qsp-X8-M5O">
+            <objects>
+                <tableViewController id="03g-IF-tBk" customClass="CurrencyPickerController" customModule="FinanceKnight" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="SyW-nN-A05">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="03g-IF-tBk" id="AdS-q2-rv3"/>
+                            <outlet property="delegate" destination="03g-IF-tBk" id="990-J9-R3t"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Pjt-Jg-scG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJN-T3-dFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1922" y="155"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="Xhj-Ri-WiO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Te-mZ-vvX" customClass="BaseNavigationController" customModule="FinanceKnight" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="js1-Sn-EtI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="644-Sa-RYL" kind="relationship" relationship="rootViewController" id="ols-Nc-n4q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HnA-hV-gmf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.956521739130437" y="154.6875"/>
+        </scene>
+    </scenes>
+</document>

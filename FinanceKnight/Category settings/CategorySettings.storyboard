@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YPR-r2-ekg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create category-->
+        <scene sceneID="Rea-LU-9U2">
+            <objects>
+                <tableViewController id="vYV-eg-pce" customClass="CategorySettingsController" customModule="FinanceKnight" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="k2p-4L-vog">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="vYV-eg-pce" id="mDo-mL-bQr"/>
+                            <outlet property="delegate" destination="vYV-eg-pce" id="OnT-Rr-Cie"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Create category" id="Bm3-Vc-fWw">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cvd-qZ-KHv">
+                            <color key="tintColor" red="0.35294117650000001" green="0.42352941179999998" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancel:" destination="vYV-eg-pce" id="hdv-t8-1wQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="mez-te-wOn" kind="show" identifier="IconPicker" id="Lvy-oe-Y17"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ygC-dP-xYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3203" y="537"/>
+        </scene>
+        <!--Icon Picker Controller-->
+        <scene sceneID="PMP-An-fsO">
+            <objects>
+                <collectionViewController id="mez-te-wOn" customClass="IconPickerController" customModule="FinanceKnight" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ztf-Ug-5gM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" sectionInsetReference="layoutMargins" id="nkd-zK-sAM">
+                            <size key="itemSize" width="60" height="60"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="mez-te-wOn" id="Ajg-LA-en3"/>
+                            <outlet property="delegate" destination="mez-te-wOn" id="wm8-te-jmX"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="ONg-YO-aHR"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jet-0D-D2x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4213" y="536"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="OnF-0S-Xag">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YPR-r2-ekg" customClass="BaseNavigationController" customModule="FinanceKnight" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="tBB-x3-HJ8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hxj-uk-mAA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vYV-eg-pce" kind="relationship" relationship="rootViewController" id="7Gr-Ob-iue"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CLm-yO-rBj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2238" y="537"/>
+        </scene>
+    </scenes>
+</document>

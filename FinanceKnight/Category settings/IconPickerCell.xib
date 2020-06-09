@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IconPickerCell" id="qKK-Ab-kPq" customClass="IconPickerCell" customModule="FinanceKnight" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="158" height="158"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zwd-t4-TTO">
+                <rect key="frame" x="0.0" y="0.0" width="158" height="158"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4c-LV-fwM" customClass="DesignableView" customModule="FinanceKnight" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="158" height="158"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="🌝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qFW-aE-P6Z">
+                                <rect key="frame" x="62" y="61" width="34" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qFW-aE-P6Z" firstAttribute="centerX" secondItem="e4c-LV-fwM" secondAttribute="centerX" id="6tS-5K-PTS"/>
+                            <constraint firstAttribute="width" secondItem="e4c-LV-fwM" secondAttribute="height" multiplier="1:1" id="yLB-uJ-Fgm"/>
+                            <constraint firstItem="qFW-aE-P6Z" firstAttribute="centerY" secondItem="e4c-LV-fwM" secondAttribute="centerY" id="ynb-pt-nGc"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.14999999999999999"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="e4c-LV-fwM" secondAttribute="bottom" id="DsX-kG-T5g"/>
+                    <constraint firstItem="e4c-LV-fwM" firstAttribute="leading" secondItem="Zwd-t4-TTO" secondAttribute="leading" id="RBD-8P-wob"/>
+                    <constraint firstAttribute="trailing" secondItem="e4c-LV-fwM" secondAttribute="trailing" id="g1s-b1-fh9"/>
+                    <constraint firstItem="e4c-LV-fwM" firstAttribute="top" secondItem="Zwd-t4-TTO" secondAttribute="top" id="zit-W4-ltB"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="158" height="158"/>
+            <connections>
+                <outlet property="iconLabel" destination="qFW-aE-P6Z" id="hT9-TI-N9v"/>
+            </connections>
+            <point key="canvasLocation" x="162.31884057971016" y="194.86607142857142"/>
+        </collectionViewCell>
+    </objects>
+</document>
